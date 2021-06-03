@@ -73,6 +73,16 @@ VVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVV
 Todo
     https://docs.spring.io/spring-kafka/docs/2.5.3.RELEASE/reference/html/#event-consumption
     
+Dynamic Kafka Listener
+    https://stackoverflow.com/questions/63664549/create-message-liseners-dynamically-for-the-topics
+    https://stackoverflow.com/questions/53715268/kafka-spring-how-to-create-listeners-dynamically-or-in-a-loop
+    https://stackoverflow.com/questions/50325766/implementing-shared-logic-for-multiple-kafkalisteners-in-spring-kafka
+       
+MethodKafkaListenerEndpoint
+    https://stackoverflow.com/questions/50325766/implementing-shared-logic-for-multiple-kafkalisteners-in-spring-kafka/50331279#50331279
+    https://github.com/bkatwal/kafka-util
+    https://bikas-katwal.medium.com/start-stop-kafka-consumers-or-subscribe-to-new-topic-programmatically-using-spring-kafka-2d4fb77c9117
+        
 VVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVV 
 
 
