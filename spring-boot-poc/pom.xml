@@ -19,6 +19,7 @@
         <module>kafka-poc</module>
         <module>hazelcast-poc</module>
         <module>aop-poc</module>
+        <module>file-chunk-poc</module>
     </modules>
 
     <properties>
