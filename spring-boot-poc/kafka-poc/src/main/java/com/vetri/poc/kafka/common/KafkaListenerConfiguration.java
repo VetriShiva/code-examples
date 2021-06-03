@@ -90,6 +90,7 @@ public class KafkaListenerConfiguration implements KafkaListenerConfigurer {
         configProps.put(JsonDeserializer.TRUSTED_PACKAGES,consumerInfo.getTrustedPackages());
         configProps.put(ConsumerConfig.MAX_POLL_RECORDS_CONFIG, consumerInfo.getMaxPollRecords());
         configProps.put(ConsumerConfig.MAX_POLL_INTERVAL_MS_CONFIG, consumerInfo.getMaxPollIntervalMs());
+        configProps.put(ConsumerConfig.AUTO_OFFSET_RESET_CONFIG, consumerInfo.getAutoOffsetReset());
 
         configProps.put(ConsumerConfig.SESSION_TIMEOUT_MS_CONFIG, consumerInfo.getSessionTimeoutMs());
         configProps.put(ConsumerConfig.ENABLE_AUTO_COMMIT_CONFIG, consumerInfo.isEnableAutoCommit());

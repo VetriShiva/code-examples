@@ -18,6 +18,7 @@ public class ConsumerInfo {
     private boolean enableAutoCommit; // AckMode will set based on this
     private String autoCommitCodePosition; // start or end of consumer method
     private int autoCommitIntervalMs;
+    private String autoOffsetReset;
 
     // Listener Props
     private String id;

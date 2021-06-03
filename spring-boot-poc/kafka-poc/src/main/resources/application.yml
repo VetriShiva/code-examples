@@ -29,7 +29,8 @@ consumer-list:
       sessionTimeoutMs: 30000
       enableAutoCommit: false # AcMode will set based on this
       autoCommitCodePosition: start # start or end of consumer method
-      autoCommitIntervalMs : 1000
+      autoCommitIntervalMs: 1000
+      autoOffsetReset: earliest # earliest or latest
 
       # Listner Props
       id: ${spring.application.name}-hello
