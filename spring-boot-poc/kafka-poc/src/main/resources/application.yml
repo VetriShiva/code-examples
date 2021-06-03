@@ -1,0 +1,42 @@
+spring:
+  profiles:
+    active: local
+  application:
+    name: kafka-poc
+
+server:
+  port: 9000
+
+kafka:
+  listener.name: vetri
+  topic: kafkaTopic
+  consumerGroupId: group_id
+  server: localhost:9092
+
+consumer-list:
+  configurations:
+    -
+      listenerBeanName: helloKafkaListener
+
+      # Consumer Props
+      bootstrapServers: ${kafka.server}
+      groupId: hello_consumer
+      keyDeserializerClass: org.apache.kafka.common.serialization.StringDeserializer
+      valueDeserializerClass: org.apache.kafka.common.serialization.StringDeserializer
+      trustedPackages: '*'
+      maxPollRecords: 30
+      maxPollIntervalMs: 3000
+      sessionTimeoutMs: 30000
+      enableAutoCommit: false # AcMode will set based on this
+      autoCommitCodePosition: start # start or end of consumer method
+      autoCommitIntervalMs : 1000
+
+      # Listner Props
+      id: ${spring.application.name}-hello
+      topics: hello
+      autoStartup: true
+      concurrency: 1
+      containerFactory: helloKafkaListenerContainerFactory
+
+      # Custom props
+      message: VetriShiva
