@@ -20,6 +20,7 @@
         <module>hazelcast-poc</module>
         <module>aop-poc</module>
         <module>file-chunk-poc</module>
+        <module>spring-cloud-task-poc</module>
     </modules>
 
     <properties>
