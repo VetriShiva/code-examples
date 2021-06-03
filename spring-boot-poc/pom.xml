@@ -18,6 +18,7 @@
     <modules>
         <module>kafka-poc</module>
         <module>hazelcast-poc</module>
+        <module>aop-poc</module>
     </modules>
 
     <properties>
