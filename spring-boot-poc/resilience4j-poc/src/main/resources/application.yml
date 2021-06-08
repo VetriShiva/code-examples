@@ -1,0 +1,37 @@
+server:
+  port: 9094
+spring:
+  application:
+    name: report-service
+#eureka:
+#  client:
+#    service-url:
+#      default-zone: http://localhost:8761/eureka
+resilience4j.retry:
+  instances:
+    allCustomer:
+      maxAttempts: 3
+      waitDuration: 10s
+      enableExponentialBackoff: true
+
+resilience4j.circuitbreaker:
+  instances:
+    default:
+      minimumNumberOfCalls: 25
+
+resilience4j.timelimiter:
+  instances:
+    default:
+      timeoutDuration: 2s
+
+resilience4j.ratelimiter:
+  instances:
+    default:
+      limitForPeriod: 2
+      limitRefreshPeriod: 10s
+
+resilience4j.bulkhead:
+  instances:
+    mycalls:
+      maxConcurrentCalls: 5
+#      maxWaitDuration: 1000
