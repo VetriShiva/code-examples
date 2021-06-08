@@ -21,6 +21,7 @@
         <module>aop-poc</module>
         <module>file-chunk-poc</module>
         <module>spring-cloud-task-poc</module>
+        <module>resilience4j-poc</module>
     </modules>
 
     <properties>
