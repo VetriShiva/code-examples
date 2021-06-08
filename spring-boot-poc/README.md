@@ -19,6 +19,9 @@ VVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVV
 
 References
 
+    SpringBoot
+        https://howtodoinjava.com/spring-boot2/spring-boot-annotations/
+
     JMX
         https://www.infoworld.com/article/2073316/dynamic-java-log-levels-with-jmx-loggingmxbean--jconsole--visualvm--and-groovy.html
         
