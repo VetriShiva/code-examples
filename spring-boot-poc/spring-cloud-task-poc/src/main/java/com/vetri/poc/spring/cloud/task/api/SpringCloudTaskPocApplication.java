@@ -1,4 +1,4 @@
-package om.vetri.poc.spring.cloud.task.api;
+package com.vetri.poc.spring.cloud.task.api;
 
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.boot.CommandLineRunner;
