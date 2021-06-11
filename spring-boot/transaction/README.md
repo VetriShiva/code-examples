@@ -1,7 +1,6 @@
 # Transaction
 
 ```
-
 Database transaction
     single logical unit of work which accesses and possibly modifies the contents of a database
 
@@ -88,4 +87,48 @@ References
     REPEATABLE_READ Vs READ_COMMITTED
         https://stackoverflow.com/questions/4034976/difference-between-read-commited-and-repeatable-read
         
+```
+
+# Concurrency and Locking With JPA
+
+```
+
+References
+    https://www.baeldung.com/jpa-pessimistic-locking
+    https://www.baeldung.com/java-jpa-transaction-locks
+    https://dzone.com/articles/concurrency-and-locking-with-jpa-everything-you-ne
+    
+Implementation
+    Optimistic Locking 
+    https://blog.mimacom.com/testing-optimistic-locking-handling-spring-boot-jpa/
+    Pessimistic Locking
+    https://blog.mimacom.com/testing-pessimistic-locking-handling-spring-boot-jpa/    
+VVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVV  
+
+Optimistic Locking
+    @Version field - numeric (int, long, short) or java.sql.Timestamp field
+    OptimisticLockException based on this version field
+    Each succesful transaction this version value increased
+    
+Optimistic Lock Modes
+    OPTIMISTIC 
+        obtains the read lock for the entities with @Version property. 
+    OPTIMISTIC_FORCE_INCREMENT 
+        obtains the read lock for the entities with @Version property and increments the value of the property.
+    
+Pessimistic Locking
+    JPA creates a transaction that obtains a lock on the data until the transaction is completed.
+    Pessimistic locking can be very useful when the data is frequently accessed and modified by multiple transactions.
+    Keep in mind that using pessimistic locking may result in decreased application performance, if the entities are not susceptible to frequent modifications.
+    
+Pessimistic Lock Modes
+    PESSIMISTIC_READ 
+        obtains a long-term read lock on the data to prevent the data from being updated or deleted. Other transactions may read the data during the lock, but will not be able to modify or delete the data.
+    PESSIMISTIC_FORCE_INCREMENT 
+        obtains a long-term read lock on the data to prevent the data from being updated or deleted. Also, increments the value of @Version property.
+    PESSIMISTIC_WRITE 
+        obtains a long-term read lock on the data to prevent the data from being read, updated or deleted.
+        
+PessimisticLockException,LockTimeoutException 
+
 ```
