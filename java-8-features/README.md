@@ -41,6 +41,8 @@ mathOperations
     
     // mapInt to List
     List<Integer> prices = phoneList.stream().mapToInt(p->p.getPrice()).boxed().collect(Collectors.toList());
+    
+
 VVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVV  
 
 References
@@ -51,6 +53,10 @@ References
     Find maximum, minimum, sum and average of a list in Java 8
         https://stackoverflow.com/questions/25988707/find-maximum-minimum-sum-and-average-of-a-list-in-java-8/25988761
     Why can't mapToInt be used with collect(toList())?        
-        https://stackoverflow.com/questions/50552258/why-cant-maptoint-be-used-with-collecttolist
-    
+        https://stackoverflow.com/questions/50552258/why-cant-maptoint-be-used-with-collecttolist    
+    How to find second highest salary in below array list using Java8 streams  
+        https://stackoverflow.com/questions/64927047/how-to-find-second-highest-salary-in-below-array-list-using-java8-streams  
+        Optional<Employee> emp = employeeList.stream()
+            .sorted(Comparator.comparingDouble(Employee::getSalary).reversed()).skip(1).findFirst();
+            
 ```
